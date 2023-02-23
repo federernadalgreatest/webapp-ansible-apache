@@ -1,0 +1,160 @@
+2023-02-15 11:47:47,547 p=5947 u=deploy n=ansiblelint | Guessed /home/deploy/webapp-ansible-apache as project root directory
+2023-02-15 11:47:48,689 p=5947 u=deploy n=ansiblelint | Listing 1 violation(s) that are fatal
+2023-02-15 11:49:07,742 p=5975 u=deploy n=ansiblelint | Guessed /home/deploy/webapp-ansible-apache as project root directory
+2023-02-15 11:49:08,700 p=5975 u=deploy n=ansiblelint | Listing 1 violation(s) that are fatal
+2023-02-15 11:52:32,105 p=6003 u=deploy n=ansiblelint | Guessed /home/deploy/webapp-ansible-apache as project root directory
+2023-02-15 11:52:33,059 p=6003 u=deploy n=ansiblelint | Listing 1 violation(s) that are fatal
+2023-02-15 11:52:54,472 p=6015 u=deploy n=ansiblelint | Guessed /home/deploy/webapp-ansible-apache as project root directory
+2023-02-15 11:52:55,437 p=6015 u=deploy n=ansiblelint | Listing 1 violation(s) that are fatal
+2023-02-15 11:54:17,467 p=6048 u=deploy n=ansiblelint | Guessed /home/deploy/webapp-ansible-apache as project root directory
+2023-02-16 10:34:08,009 p=10736 u=deploy n=ansible | [WARNING]: Skipping unexpected key (prod) in group (all), only "vars", "children" and "hosts" are valid
+
+2023-02-16 10:34:08,227 p=10736 u=deploy n=ansible | ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/deploy/webapp-ansible-apache/deploy.yaml
+
+The error appears to be in '/home/deploy/webapp-ansible-apache/deploy.yaml': line 1, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+name: "Apache installation avec Docker"
+^ here
+
+2023-02-16 10:34:58,887 p=10741 u=deploy n=ansible | [WARNING]: Skipping unexpected key (prod) in group (all), only "vars", "children" and "hosts" are valid
+
+2023-02-16 10:34:59,010 p=10741 u=deploy n=ansible | ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/deploy/webapp-ansible-apache/deploy.yaml
+
+The error appears to be in '/home/deploy/webapp-ansible-apache/deploy.yaml': line 1, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+name: Apache installation avec Docker
+^ here
+
+2023-02-16 10:36:10,524 p=10747 u=deploy n=ansible | [WARNING]: Skipping unexpected key (prod) in group (all), only "vars", "children" and "hosts" are valid
+
+2023-02-16 10:36:10,653 p=10747 u=deploy n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  mapping values are not allowed in this context
+
+The error appears to be in '/home/deploy/webapp-ansible-apache/deploy.yaml': line 3, column 8, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+-name: Apache installation avec Docker
+  hosts: prod
+       ^ here
+
+2023-02-16 10:36:33,325 p=10752 u=deploy n=ansiblelint | Guessed /home/deploy/webapp-ansible-apache as project root directory
+2023-02-16 10:36:34,307 p=10752 u=deploy n=ansiblelint | Listing 1 violation(s) that are fatal
+2023-02-16 10:40:08,600 p=10766 u=deploy n=ansiblelint | Guessed /home/deploy/webapp-ansible-apache as project root directory
+2023-02-16 10:40:09,585 p=10766 u=deploy n=ansiblelint | Listing 1 violation(s) that are fatal
+2023-02-16 10:41:37,698 p=10779 u=deploy n=ansiblelint | Guessed /home/deploy/webapp-ansible-apache as project root directory
+2023-02-16 10:41:38,667 p=10779 u=deploy n=ansible | [WARNING]: While constructing a mapping from <unicode string>, line 8, column 7, found a duplicate dict key
+(name). Using last defined value only.
+
+2023-02-16 10:41:38,673 p=10779 u=deploy n=ansiblelint.skip_utils | Error trying to append skipped rules
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/ansiblelint/skip_utils.py", line 95, in append_skipped_rules
+    yaml_skip = _append_skipped_rules(pyyaml_data, lintable)
+  File "/usr/local/lib/python3.10/dist-packages/ansiblelint/skip_utils.py", line 191, in _append_skipped_rules
+    raise RuntimeError("Error in matching skip comment to a task")
+RuntimeError: Error in matching skip comment to a task
+2023-02-16 10:41:39,204 p=10790 u=deploy n=ansible | [WARNING]: While constructing a mapping from /home/deploy/webapp-ansible-
+apache/deploy.yaml, line 8, column 7, found a duplicate dict key (name). Using
+last defined value only.
+
+2023-02-16 10:41:39,210 p=10790 u=deploy n=ansible | ERROR! conflicting action statements: apt, state
+
+The error appears to be in '/home/deploy/webapp-ansible-apache/deploy.yaml': line 8, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  pre_tasks:
+    - name: Installation Docker
+      ^ here
+
+2023-02-16 10:41:39,260 p=10779 u=deploy n=ansiblelint.skip_utils | Error trying to append skipped rules
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/ansiblelint/skip_utils.py", line 95, in append_skipped_rules
+    yaml_skip = _append_skipped_rules(pyyaml_data, lintable)
+  File "/usr/local/lib/python3.10/dist-packages/ansiblelint/skip_utils.py", line 191, in _append_skipped_rules
+    raise RuntimeError("Error in matching skip comment to a task")
+RuntimeError: Error in matching skip comment to a task
+2023-02-16 10:41:39,265 p=10779 u=deploy n=ansiblelint.skip_utils | Error trying to append skipped rules
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/ansiblelint/skip_utils.py", line 95, in append_skipped_rules
+    yaml_skip = _append_skipped_rules(pyyaml_data, lintable)
+  File "/usr/local/lib/python3.10/dist-packages/ansiblelint/skip_utils.py", line 191, in _append_skipped_rules
+    raise RuntimeError("Error in matching skip comment to a task")
+RuntimeError: Error in matching skip comment to a task
+2023-02-16 10:41:39,266 p=10779 u=deploy n=ansiblelint | Listing 1 violation(s) that are fatal
+2023-02-16 10:42:35,385 p=10797 u=deploy n=ansiblelint | Guessed /home/deploy/webapp-ansible-apache as project root directory
+2023-02-16 10:42:36,926 p=10808 u=deploy n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: prod
+
+2023-02-16 10:42:36,926 p=10808 u=deploy n=ansible | playbook: deploy.yaml
+2023-02-16 10:42:37,215 p=10797 u=deploy n=ansiblelint | Listing 2 violation(s) that are fatal
+2023-02-16 10:44:27,012 p=10814 u=deploy n=ansiblelint | Guessed /home/deploy/webapp-ansible-apache as project root directory
+2023-02-16 10:44:28,450 p=10825 u=deploy n=ansible | ERROR! 'pre_task' is not a valid attribute for a Play
+
+The error appears to be in '/home/deploy/webapp-ansible-apache/deploy.yaml': line 2, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+- name: Apache installation avec Docker
+  ^ here
+
+2023-02-16 10:44:28,504 p=10814 u=deploy n=ansiblelint | Listing 1 violation(s) that are fatal
+2023-02-16 10:47:06,697 p=10834 u=deploy n=ansiblelint | Guessed /home/deploy/webapp-ansible-apache as project root directory
+2023-02-16 10:47:08,191 p=10845 u=deploy n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: prod
+
+2023-02-16 10:47:08,191 p=10845 u=deploy n=ansible | playbook: deploy.yaml
+2023-02-16 10:47:08,439 p=10834 u=deploy n=ansiblelint | Listing 2 violation(s) that are fatal
+2023-02-16 10:52:23,480 p=10990 u=deploy n=ansiblelint | Guessed /home/deploy/webapp-ansible-apache as project root directory
+2023-02-16 10:52:24,969 p=11001 u=deploy n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: prod
+
+2023-02-16 10:52:24,969 p=11001 u=deploy n=ansible | playbook: deploy.yaml
+2023-02-16 10:52:25,214 p=10990 u=deploy n=ansiblelint | Listing 2 violation(s) that are fatal
+2023-02-17 08:49:43,647 p=21286 u=deploy n=ansiblelint | Guessed /home/deploy/webapp-ansible-apache as project root directory
+2023-02-17 08:49:45,323 p=21297 u=deploy n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: prod
+
+2023-02-17 08:49:45,324 p=21297 u=deploy n=ansible | playbook: deploy.yaml
+2023-02-17 08:49:45,620 p=21286 u=deploy n=ansiblelint | Listing 2 violation(s) that are fatal
+2023-02-17 08:51:34,467 p=21304 u=deploy n=ansiblelint | Guessed /home/deploy/webapp-ansible-apache as project root directory
+2023-02-17 08:51:35,967 p=21315 u=deploy n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: prod
+
+2023-02-17 08:51:35,970 p=21315 u=deploy n=ansible | playbook: deploy.yaml
+2023-02-17 08:51:36,222 p=21304 u=deploy n=ansiblelint | Listing 1 violation(s) that are fatal
+2023-02-17 08:57:01,141 p=21325 u=deploy n=ansiblelint | Guessed /home/deploy/webapp-ansible-apache as project root directory
+2023-02-17 08:57:02,623 p=21336 u=deploy n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: prod
+
+2023-02-17 08:57:02,623 p=21336 u=deploy n=ansible | playbook: deploy.yaml
+2023-02-17 09:21:24,956 p=21446 u=deploy n=ansiblelint | Guessed /home/deploy/webapp-ansible-apache as project root directory
+2023-02-17 09:21:26,474 p=21457 u=deploy n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: prod
+
+2023-02-17 09:21:26,475 p=21457 u=deploy n=ansible | playbook: deploy.yaml
+2023-02-17 09:28:46,361 p=21542 u=deploy n=ansible | [WARNING]: Error in vault password prompt (default): Passwords do not match
+
+2023-02-17 09:28:46,362 p=21542 u=deploy n=ansible | ERROR! Passwords do not match
+2023-02-17 09:42:46,920 p=21639 u=deploy n=ansible | PLAY [Apache installation avec Docker] *****************************************
+2023-02-17 09:42:46,989 p=21639 u=deploy n=ansible | TASK [Gathering Facts] *********************************************************
+2023-02-17 09:42:50,116 p=21639 u=deploy n=ansible | fatal: [srv-apache-1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.1.206 port 22: No route to host", "unreachable": true}
+2023-02-17 09:42:50,118 p=21639 u=deploy n=ansible | PLAY RECAP *********************************************************************
+2023-02-17 09:42:50,118 p=21639 u=deploy n=ansible | srv-apache-1               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2023-02-17 09:46:05,231 p=21658 u=deploy n=ansible | PLAY [Apache installation avec Docker] **************************************************************************************************
+2023-02-17 09:46:05,290 p=21658 u=deploy n=ansible | TASK [Gathering Facts] ******************************************************************************************************************
+2023-02-17 09:46:07,451 p=21658 u=deploy n=ansible | ok: [srv-apache-1]
+2023-02-17 09:46:07,507 p=21658 u=deploy n=ansible | TASK [Installation Docker] **************************************************************************************************************
+2023-02-17 09:46:25,450 p=21658 u=deploy n=ansible | changed: [srv-apache-1]
+2023-02-17 09:46:25,562 p=21658 u=deploy n=ansible | TASK [Create Apache container] **********************************************************************************************************
+2023-02-17 09:46:32,506 p=21658 u=deploy n=ansible | changed: [srv-apache-1]
+2023-02-17 09:46:32,646 p=21658 u=deploy n=ansible | PLAY RECAP ******************************************************************************************************************************
+2023-02-17 09:46:32,646 p=21658 u=deploy n=ansible | srv-apache-1               : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
